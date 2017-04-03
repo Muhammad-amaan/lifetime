@@ -1,6 +1,7 @@
 <?php
-class Time
-{
+
+class Time {
+
     public $date;
     public $time;
 
