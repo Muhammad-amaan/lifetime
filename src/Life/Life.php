@@ -28,7 +28,7 @@ class Life {
         $dateEnd   = new \DateTime($end);
 
         $diff = $dateStart->diff($dateEnd);
-        return $diff->format($format);
+        echo $diff->format($format);
         /* OUTPUT 03:22:00  */
     }
 
