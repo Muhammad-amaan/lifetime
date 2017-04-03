@@ -32,4 +32,24 @@ class Life {
         /* OUTPUT 03:22:00  */
     }
 
+    /*
+     * TIME PERIODS
+     */
+    public function DateRange()
+    {
+        $collection = [];
+
+        $begin = new \DateTime( '2012-08-01' );
+        $end = new \DateTime( '2012-08-31' );
+        $end = $end->modify( '+1 day' );
+
+        $interval = new \DateInterval('P1D');
+        $daterange = new \DatePeriod($begin, $interval ,$end);
+
+        foreach($daterange as $date){
+            array_push($collection, $date->format("Y-m-d"));
+        }
+        return $collection;
+    }
+
 }
