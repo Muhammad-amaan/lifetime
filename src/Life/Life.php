@@ -58,11 +58,11 @@ class Life {
     | SET TIME                           |
     |===================================*/
 
-    public function setTime($date)
+    public function setTime($date, $timeString)
     {
         $date = new DateTime($date);
 
-        $date->setTime(14, 55, 24);
+        $date->setTime($timeString, $date = null);
         return $date->format('Y-m-d H:i:s');
     }
 
