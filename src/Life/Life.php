@@ -7,7 +7,6 @@ use DateTime;
 
 class Life {
 
-    public $date;
 
     public function now()
     {
@@ -64,15 +63,12 @@ class Life {
     {
         date_default_timezone_set('Asia/Karachi');
         $date = new DateTime($date);
-
         return $date;
     }
 
     public function setTime($timeString)
     {
-        date_default_timezone_set('Asia/Karachi');
-        $this->date->setTime($timeString);
-        $this->date->format('Y-m-d H:i:s');
+
     }
 
 }
