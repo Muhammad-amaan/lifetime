@@ -63,7 +63,7 @@ class Life {
         date_default_timezone_set('Asia/Karachi');
         $date = new DateTime($date);
 
-        $date->setTime($timeString, $date = null);
+        $date->setTime($timeString, $timeString = '');
         return $date->format('Y-m-d H:i:s');
     }
 
