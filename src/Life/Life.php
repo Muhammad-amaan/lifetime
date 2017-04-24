@@ -3,6 +3,8 @@
 namespace Life;
 
 
+use DateTime;
+
 class Life {
 
     public function now()
@@ -50,6 +52,18 @@ class Life {
             array_push($collection, $date->format("Y-m-d"));
         }
         return $collection;
+    }
+
+    /*===================================*
+    | SET TIME                           |
+    |===================================*/
+
+    public function setTime($date)
+    {
+        $date = new DateTime($date);
+
+        $date->setTime(14, 55, 24);
+        return $date->format('Y-m-d H:i:s');
     }
 
 }
