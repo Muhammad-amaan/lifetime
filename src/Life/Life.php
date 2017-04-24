@@ -60,6 +60,7 @@ class Life {
 
     public function setTime($date, $timeString)
     {
+        date_default_timezone_set('Asia/Karachi');
         $date = new DateTime($date);
 
         $date->setTime($timeString, $date = null);
